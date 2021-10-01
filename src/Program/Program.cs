@@ -4,8 +4,8 @@
     {
         static void Main(string[] args)
         {        
-            TemperatureSensor sensor = new TemperatureSensor();
-            TemperatureReporter reporter = new TemperatureReporter();
+            ISubject<TemperatureSensor> sensor = new TemperatureSensor();
+            IObserver<TemperatureReporter> reporter = new TemperatureReporter();
             reporter.StartReporting(sensor);
             sensor.GetTemperature();
         }

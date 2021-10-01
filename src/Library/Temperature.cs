@@ -12,5 +12,6 @@ namespace Observer
 
         public decimal Degrees { get; }
         public DateTime Date { get; }
+
     }
 }
